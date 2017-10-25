@@ -17,7 +17,39 @@ public class Main {
 
         String input = scanner.nextLine();
 
-        ArrayList<String> months = new ArrayList<String>();
+        ArrayList<String> months = new ArrayList<String>(); switch(input) {
+            case "January":
+                months.add(Months.JANUARY.getEnglishName());
+            case "February":
+                months.add(Months.FEBRUARY.getEnglishName());
+            case "March":
+                months.add(Months.MARCH.getEnglishName());
+            case "April":
+                months.add(Months.APRIL.getEnglishName());
+            case "May":
+                months.add(Months.MAY.getEnglishName());
+            case "June":
+                months.add(Months.JUNE.getEnglishName());
+            case "July":
+                months.add(Months.JULY.getEnglishName());
+            case "August":
+                months.add(Months.AUGUST.getEnglishName());
+            case "September":
+                months.add(Months.SEPTEMBER.getEnglishName());
+            case "October":
+                months.add(Months.OCTOBER.getEnglishName());
+            case "November":
+                months.add(Months.NOVEMBER.getEnglishName());
+            case "December":
+                months.add(Months.DECEMBER.getEnglishName());
+                break;
+            default:
+                months.add("No matching month!");
+        }
+        System.out.println(months);
+
+
+
 
     }
 
