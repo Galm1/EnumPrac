@@ -1,5 +1,10 @@
+import com.fasterxml.jackson.databind.ObjectMapper;
 import common.Months;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.Month;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -48,7 +53,17 @@ public class Main {
         }
         System.out.println(months);
 
+        File newFile = new File("may.json");
 
+        try {
+            FileWriter fileWriter = new FileWriter(newFile);
+            ObjectMapper mapper = new ObjectMapper();
+            String json = mapper.writeValueAsString(Month.JUNE);
+            fileWriter.write(json);
+            fileWriter.close();
+        } catch (IOException ex) {
+            System.out.println(ex);
+        }
 
 
     }
